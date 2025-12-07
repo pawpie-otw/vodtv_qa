@@ -91,9 +91,9 @@ class VodPage:
         await self._wait_for_selector(PLAY_BTN_EL, timeout=5_000)
         await self._page.locator(PLAY_BTN_EL).scroll_into_view_if_needed()
         # V z jakiegoś powodu nie uruchamia poprawnie player'a
-        # await vod_page.locator(PLAY_BTN_EL).click(force=True)
+        await vod_page.locator(PLAY_BTN_EL).click()
         # V a tu dochodzi do wiecznego buforowania filmu... ale popup się pojawia
-        await self._page.evaluate(f'document.querySelector("{PLAY_BTN_EL}").click()')
+        # await self._page.evaluate(f'document.querySelector("{PLAY_BTN_EL}").click()')
 
     async def wait_for_popup(self):
         await self._wait_for_selector('#popup', timeout=60000, state='visible')

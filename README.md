@@ -79,9 +79,12 @@ Content-Type: application/json
 
 ## Założenia i uproszczenia
 
+- Podczas testów w wersji hedead, film nie uruchamiał się mimo, iż przycisk został klikany poprawnie, o czym może świadczyć fakt, iż wpadał w buforowanie (animacja paska).
+- Próba rejestracji przekierowywuje na zewnątrzną witrynę, co nie koniecznie musi być błędem. Istnieje spore prawdopodobieństwo, że jest to grupa serwisów powiązanych ze sobą, więc nie jest to zgłaszane jako błąd, a jako uwaga.
+
 ## Napotkane problemy
 
-- Widget video na stronie jest dość problematyczny w obsłudze i lubi się totalnie zablokować lub wpaść w nieskończony buffor (w tej lepszej sytuacji), co pozwala zakończyć test pozytywnie. Nie mam pojęcia o co chodzi, gdyż nawet zastopowanie testu i próba ręcznego wyklikania elementów nie przynosi skutku. Możliwe, engine
+- Widget video na stronie jest dość problematyczny w obsłudze i lubi się totalnie zablokować lub wpaść w nieskończony buffor (w tej lepszej sytuacji), co pozwala zakończyć test pozytywnie. Nie mam pojęcia o co chodzi, gdyż nawet zastopowanie testu i próba ręcznego wyklikania elementów nie przynosi skutku. 
 
 ## Raporty błędów
 
